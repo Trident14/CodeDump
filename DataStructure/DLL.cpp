@@ -89,40 +89,17 @@ public:
     }
     
     void deleteNode(int val){
-        len--;
        
         Node* cur = head;
-        
-        
         
         while(cur->data!=val || cur==NULL){
             cur = cur->next;
         }
-       
-        if(cur==head){
-            head=cur->next;
-            delete(cur);
-            return;
-        }
-        
-        if(cur==tail){
-            cur->prev->next=NULL;
-            tail=cur->prev;
-            return;
-        }
+        cout<<"cur :"<<cur->data<<endl;
         cur->prev->next=cur->next;
         cur->next->prev=cur->prev;
         
        
-    }
-    int getIdx(int idx){
-        if(idx>len) return -1;
-        Node*cur =head;
-        while(idx--){
-            cur=cur->next;
-        }
-        
-        return cur->data;
     }
 
 
@@ -159,10 +136,9 @@ int main() {
     myDLL.prepend(-1);
     
      myDLL.insertAt(6,100);
-     myDLL.deleteNode(4);
+     myDLL.deleteNode(0);
     
      cout<<myDLL.getLen()<<endl;
-     cout<<myDLL.getIdx(5)<<endl;
     
     myDLL.printDLL();
 

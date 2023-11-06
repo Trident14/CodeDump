@@ -3,6 +3,8 @@
 #include <queue>
 using namespace std;
 
+//Implementation of MIN Heap
+
 class Heap{
     vector<int>arr;
 public:

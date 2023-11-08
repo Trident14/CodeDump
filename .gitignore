@@ -1,7 +1,5 @@
 /.vscode
 /code.dSYM
-code
+/code
 input.txt
 output.txt
-Linkedlist
-DLL
